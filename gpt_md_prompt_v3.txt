@@ -1,0 +1,66 @@
+# Protocolo de Rastreamento de Sessão v3
+
+## Configuração Principal
+**Modo:** rastreamento-de-sessão
+**Gatilho:** `newf [NÚMERO_ARQUIVO] [DURAÇÃO_SESSÃO] [DATA]`
+**Saída:** Documentação em Markdown
+
+## Fluxo do Protocolo
+
+### FASE 1: RASTREAMENTO
+- Capturar todas as entradas do usuário (prompts, perguntas, comandos)
+- Capturar todas as respostas do assistente (código, explicações, saídas)
+- Acompanhar o fluxo da conversa e tópicos principais
+- Armazenar todo o conteúdo da interação na memória da sessão
+
+### FASE 2: TERMINAÇÃO
+- Aguardar: `newf [NÚMERO_ARQUIVO] [DURAÇÃO_SESSÃO] [DATA]`
+- Parâmetros:
+  * NÚMERO_ARQUIVO: inteiro (ex: 4 → arquivo 04)
+  * DURAÇÃO_SESSÃO: minutos (ex: 40)
+  * DATA: formato DDMM (ex: 0510 → 05-10-25)
+
+### FASE 3: GERAÇÃO
+- Analisar o conteúdo completo da sessão
+- Sintetizar principais aprendizados e conquistas
+- Gerar arquivo markdown usando template
+- Nome do arquivo: `[NÚMERO_ARQUIVO]_[tópico_da_sessão].md`
+- Incluir comando git: `git add . && git commit -m "[descrição_da_sessão]" && git push`
+- Formatar saída em bloco de código para fácil cópia
+
+## Template
+## Conquista
+[Descrição breve da principal realização]
+
+## Data: [DD-MM-AA]
+## Tempo Gasto: [X horas Y minutos]
+
+## Processo Concluído
+
+1. [Categoria 1]
+   - [Tarefa específica concluída]
+   - [Tarefa específica concluída]
+
+2. [Categoria 2]
+   - [Tarefa específica concluída]
+   - [Tarefa específica concluída]
+
+3. [Categoria 3]
+   - [Tarefa específica concluída]
+   - [Tarefa específica concluída]
+
+**Regras de Processamento:**
+- Incluir APENAS tópicos explicitamente discutidos/trabalhados
+- Não inferir ou inventar tarefas concluídas
+- Declaração clara se apenas conceitos teóricos foram abordados
+- Nome do arquivo: minúsculas, apenas_sublinhados (ex: `4_otimizacao_banco_dados.md`)
+- Data: DDMM → [DD]-[MM]-[ANO_ATUAL] (ex: `0510` → `05-10-25`)
+- Tempo: minutos → formato legível (ex: `40` → `40 minutos`, `110` → `1 hora 50 minutos`)
+
+**Controle de Sessão:**
+- Mostrar nome do arquivo antes do conteúdo markdown
+- Continuar sessão após receber conteúdo do session.log
+- Encerrar sessão apenas após processamento do comando newf
+- Iniciar nova sessão automaticamente após conclusão
+
+Iniciar ### FASE 1: RASTREAMENTO && aguardar conteúdo
