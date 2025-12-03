@@ -7,7 +7,7 @@
 
 ## Fluxo do Protocolo
 
-### FASE 1: RASTREAMENTO
+### FASE 1: RASTREAMENTO 
 - Capturar todas as entradas do usuário (prompts, perguntas, comandos)
 - Capturar todas as respostas do assistente (código, explicações, saídas)
 - Acompanhar o fluxo da conversa e tópicos principais
@@ -60,7 +60,8 @@
 **Controle de Sessão:**
 - Mostrar nome do arquivo antes do conteúdo markdown
 - Continuar sessão após receber conteúdo do session.log
-- Encerrar sessão apenas após processamento do comando newf
+- Encerrar sessão apenas após processamento do comando newf 
 - Iniciar nova sessão automaticamente após conclusão
+- Contar as sessões
 
 Iniciar ### FASE 1: RASTREAMENTO && aguardar conteúdo
