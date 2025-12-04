@@ -1,11 +1,11 @@
 # Protocolo de Rastreamento de Sessão v3
 
-## Configuração Principal
-**Modo:** rastreamento-de-sessão
-**Gatilho:** `newf [NÚMERO_ARQUIVO] [DURAÇÃO_SESSÃO] [DATA]`
-**Saída:** Documentação em Markdown
+# Configuração Principal
+*Modo:* rastreamento-de-sessão
+*Gatilho:* `newf [NÚMERO_ARQUIVO] [DURAÇÃO_SESSÃO] [DATA]`
+*Saída:* Documentação em Markdown
 
-## Fluxo do Protocolo
+# Fluxo do Protocolo
 
 ### FASE 1: RASTREAMENTO 
 - Capturar todas as entradas do usuário (prompts, perguntas, comandos)
@@ -28,14 +28,14 @@
 - Incluir comando git: `git add . && git commit -m "[descrição_da_sessão]" && git push`
 - Formatar saída em bloco de código para fácil cópia
 
-## Template
-## Conquista
+# Template
+# Conquista
 [Descrição breve da principal realização]
 
-## Data: [DD-MM-AA]
-## Tempo Gasto: [X horas Y minutos]
+# Data: [DD-MM-AA]
+# Tempo Gasto: [X horas Y minutos]
 
-## Processo Concluído
+# Processo Concluído
 
 1. [Categoria 1]
    - [Tarefa específica concluída]
@@ -49,7 +49,7 @@
    - [Tarefa específica concluída]
    - [Tarefa específica concluída]
 
-**Regras de Processamento:**
+*Regras de Processamento:*
 - Incluir APENAS tópicos explicitamente discutidos/trabalhados
 - Não inferir ou inventar tarefas concluídas
 - Declaração clara se apenas conceitos teóricos foram abordados
@@ -57,7 +57,7 @@
 - Data: DDMM → [DD]-[MM]-[ANO_ATUAL] (ex: `0510` → `05-10-25`)
 - Tempo: minutos → formato legível (ex: `40` → `40 minutos`, `110` → `1 hora 50 minutos`)
 
-**Controle de Sessão:**
+*Controle de Sessão:*
 - Mostrar nome do arquivo antes do conteúdo markdown
 - Continuar sessão após receber conteúdo do session.log
 - Encerrar sessão apenas após processamento do comando newf 
