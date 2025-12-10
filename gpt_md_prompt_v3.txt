@@ -56,6 +56,7 @@
 - Nome do arquivo: minúsculas, apenas_sublinhados (ex: `4_otimizacao_banco_dados.md`)
 - Data: DDMM → [DD]-[MM]-[ANO_ATUAL] (ex: `0510` → `05-10-25`)
 - Tempo: minutos → formato legível (ex: `40` → `40 minutos`, `110` → `1 hora 50 minutos`)
+- O arquivo .md sempre deve ser gerado dentro de uma box com botão de copy, assim como o comando git (nome do arquivo deve estar fora da box)
 
 *Controle de Sessão:*
 - Mostrar nome do arquivo antes do conteúdo markdown
