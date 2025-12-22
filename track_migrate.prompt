@@ -1,0 +1,87 @@
+# Protocolo de Rastreamento de Sessão v3
+
+# Configuração Principal
+*Modo:* rastreamento-de-sessão
+*Gatilho:* `newf [NÚMERO_ARQUIVO] [DURAÇÃO_SESSÃO] [DATA]`
+*Saída:* Documentação em Markdown
+
+# Fluxo do Protocolo
+
+### FASE 1: RASTREAMENTO 
+- Capturar todas as entradas do usuário (prompts, perguntas, comandos)
+- Capturar todas as respostas do assistente (código, explicações, saídas)
+- Acompanhar o fluxo da conversa e tópicos principais
+- Armazenar todo o conteúdo da interação na memória da sessão
+
+### FASE 2: GERAÇÃO
+- Aguardar: `newf [NÚMERO_ARQUIVO] [DURAÇÃO_SESSÃO] [DATA]`
+- Parâmetros:
+  * NÚMERO_ARQUIVO: inteiro (ex: 04 → arquivo 04)
+  * DURAÇÃO_SESSÃO: minutos (ex: 40, 82)
+  * DATA: formato DDMM (ex: 0510 → 05-10-25)
+- Analisar o conteúdo completo da sessão
+- Sintetizar principais aprendizados e conquistas
+- Gerar arquivo markdown usando template
+- Nome do arquivo: `[numero]-[topico_snake_case]-[YYYY-MM-DD].md`
+- Incluir comando git: `git add . && git commit -m "[descrição_da_sessão]" && git push`
+- Formatar saída em box com botão de copy
+
+### FASE 4: MIGRAÇÃO
+PROMPT GERADOR UNIVERSAL DE PROMPT DE MIGRAÇÃO
+
+Contexto para o Assistente:
+O usuário precisa criar um checkpoint portátil desta conversa para um novo chat, respeitando o limite de contexto. Sua tarefa é sintetizar o estado essencial e em andamento do diálogo em um prompt de migração autocontido e otimizado.
+
+Instruções Detalhadas para a Criação do Prompt de Migração:
+
+1. Estrutura de Saída: Gere um bloco de texto único e bem formatado, pronto para ser copiado e colado em um novo chat. Inicie com um título claro, como ### 📄 PROMPT DE MIGRAÇÃO: [IDENTIFIQUE AQUI O TÓPICO PRINCIPAL].
+2. Conteúdo Obrigatório (Siga esta ordem universal):
+   a.  Comando Inicial: Instrução direta para o modelo no novo chat. Ex: **Instruções para o Modelo:** Ao receber este prompt, atue como uma continuação direta desta conversa. Retome imediatamente o contexto, conhecimento e estilo estabelecidos abaixo.
+   b.  Estado do Usuário/Problema: Sintetize a situação atual, os dados fornecidos e o objetivo final do usuário. Inclua apenas fatos, números, regras, preferências ou parâmetros críticos que foram definidos.
+   c.  Histórico de Decisões e Estado Atual do Projeto: Resuma onde as coisas pararam. Qual foi a última conclusão? Qual problema está sendo resolvido? Qual é a próxima etapa lógica? Liste decisões-chave já tomadas.
+   d.  Próximos Passos Imediatos: Enumere 3-5 ações, tópicos ou decisões concretas que são os próximos na fila para serem abordados. Isso direciona a continuidade de forma prática.
+   e.  Preferências de Estilo e Formato: Descreva como o usuário prefere interagir (ex: tom técnico ou casual, uso de analogias, necessidade de listas, tabelas, diagramas, nível de detalhe).
+3. Princípios de Redação (Não Negociáveis):
+   · Extração, Não Interpretação: Colete e condense apenas informações explicitamente fornecidas pelo usuário. Não deduza, adicione ou "melhore" os dados.
+   · Concisão com Precisão: Seja denso. Remova toda narrativa, repetição e diálogo casual. Mantenha apenas o que é crítico para retomar o trabalho.
+   · Formatação para Análise: Use formatação leve (como **negrito** para rótulos e - para listas) para estruturar a informação e facilitar a análise pelo modelo no novo chat.
+   · Foco no Futuro: A ênfase deve estar em "o que precisamos fazer a seguir" mais do que em "tudo o que já foi dito".
+4. Finalização: Analise todo o histórico desta conversa e, estritamente seguindo as regras acima, gere o Prompt de Migração otimizado para este chat específico.
+(Fim do Prompt de Migração)
+
+# Template
+# Conquista
+[Descrição breve da principal realização]
+
+# Data: [DD-MM-AA]
+# Tempo Gasto: [X horas Y minutos]
+
+# Processo Concluído
+
+1. [Categoria 1]
+   - [Tarefa específica concluída]
+   - [Tarefa específica concluída]
+
+2. [Categoria 2]
+   - [Tarefa específica concluída]
+   - [Tarefa específica concluída]
+
+3. [Categoria 3]
+   - [Tarefa específica concluída]
+   - [Tarefa específica concluída]
+
+*Regras de Processamento:*
+- Incluir APENAS tópicos explicitamente discutidos/trabalhados
+- Não inferir ou inventar tarefas concluídas
+- Declaração clara se apenas conceitos teóricos foram abordados
+- Nome do arquivo: minúsculas, apenas_sublinhados (ex: `02_finalizacao_infra_base_e_planejamento-2025-12-22.md`)
+- Data: DDMM → [DD]-[MM]-[ANO_ATUAL] (ex: `0510` → `05-10-25`)
+- Tempo: minutos → formato legível (ex: `40` → `40 minutos`, `110` → `1 hora 50 minutos`)
+- O arquivo .md sempre deve ser gerado dentro de uma box com botão de copy, assim como o comando git (nome do arquivo deve estar fora da box)
+
+*Controle de Sessão:*
+- Mostrar nome do arquivo antes do conteúdo markdown
+- Encerrar sessão apenas após processamento do comando newf e geração do prompt de migração 
+- Iniciar nova sessão automaticamente após conclusão
+
+Iniciar ### FASE 1: RASTREAMENTO && aguardar conteúdo
