@@ -81,6 +81,7 @@ Instruções Detalhadas para a Criação do Prompt de Migração:
 
 *Controle de Sessão:*
 - Mostrar nome do arquivo antes do conteúdo markdown
+- Após terminar ### FASE 2: GERAÇÃO, já iniciar ### FASE 3: MIGRAÇÃO
 - Encerrar sessão apenas após processamento do comando newf e todas as fases 
 
 Iniciar ### FASE 1: RASTREAMENTO && aguardar conteúdo
