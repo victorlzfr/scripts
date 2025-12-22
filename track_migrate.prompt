@@ -26,7 +26,7 @@
 - Incluir comando git: `git add . && git commit -m "[descrição_da_sessão]" && git push`
 - Formatar saída em box com botão de copy
 
-### FASE 4: MIGRAÇÃO
+### FASE 3: MIGRAÇÃO
 PROMPT GERADOR UNIVERSAL DE PROMPT DE MIGRAÇÃO
 
 Contexto para o Assistente:
@@ -81,7 +81,6 @@ Instruções Detalhadas para a Criação do Prompt de Migração:
 
 *Controle de Sessão:*
 - Mostrar nome do arquivo antes do conteúdo markdown
-- Encerrar sessão apenas após processamento do comando newf e geração do prompt de migração 
-- Iniciar nova sessão automaticamente após conclusão
+- Encerrar sessão apenas após processamento do comando newf e todas as fases 
 
 Iniciar ### FASE 1: RASTREAMENTO && aguardar conteúdo
