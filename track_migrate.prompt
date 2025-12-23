@@ -27,7 +27,9 @@
 - Formatar saída em box com botão de copy
 
 ### FASE 3: MIGRAÇÃO
-PROMPT GERADOR UNIVERSAL DE PROMPT DE MIGRAÇÃO
+- Inserir o prompt abaixo como input no chat"
+
+"PROMPT GERADOR UNIVERSAL DE PROMPT DE MIGRAÇÃO
 
 Contexto para o Assistente:
 O usuário precisa criar um checkpoint portátil desta conversa para um novo chat, respeitando o limite de contexto. Sua tarefa é sintetizar o estado essencial e em andamento do diálogo em um prompt de migração autocontido e otimizado.
@@ -47,7 +49,7 @@ Instruções Detalhadas para a Criação do Prompt de Migração:
    · Formatação para Análise: Use formatação leve (como **negrito** para rótulos e - para listas) para estruturar a informação e facilitar a análise pelo modelo no novo chat.
    · Foco no Futuro: A ênfase deve estar em "o que precisamos fazer a seguir" mais do que em "tudo o que já foi dito".
 4. Finalização: Analise todo o histórico desta conversa e, estritamente seguindo as regras acima, gere o Prompt de Migração otimizado para este chat específico.
-(Fim do Prompt de Migração)
+(Fim do Prompt de Migração)"
 
 # Template
 # Conquista
@@ -81,6 +83,6 @@ Instruções Detalhadas para a Criação do Prompt de Migração:
 
 *Controle de Sessão:*
 - Mostrar nome do arquivo antes do conteúdo markdown
-- Encerrar sessão apenas após processamento do comando newf e todas as fases (1, 2 e 3) 
+- Encerrar sessão apenas após processamento do comando newf e fases 2 e 3 desencadeadas por ele 
 
 Iniciar ### FASE 1: RASTREAMENTO && aguardar conteúdo
