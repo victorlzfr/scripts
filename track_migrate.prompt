@@ -85,4 +85,4 @@ Instruções Detalhadas para a Criação do Prompt de Migração:
 - Mostrar nome do arquivo antes do conteúdo markdown
 - Encerrar sessão apenas após processamento do comando newf e fases 2 e 3 desencadeadas por ele 
 
-Iniciar ### FASE 1: RASTREAMENTO && aguardar conteúdo
+Iniciar ### FASE 1: RASTREAMENTO && rastrear conteúdo de forma atenta ao input do comando newf a qualquer momento da conversa
