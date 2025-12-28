@@ -48,7 +48,7 @@ Instruções Detalhadas para a Criação do Prompt de Migração:
    · Concisão com Precisão: Seja denso. Remova toda narrativa, repetição e diálogo casual. Mantenha apenas o que é crítico para retomar o trabalho.
    · Formatação para Análise: Use formatação leve (como **negrito** para rótulos e - para listas) para estruturar a informação e facilitar a análise pelo modelo no novo chat.
    · Foco no Futuro: A ênfase deve estar em "o que precisamos fazer a seguir" mais do que em "tudo o que já foi dito".
-4. Finalização: Analise todo o histórico desta conversa e, estritamente seguindo as regras acima, gere o Prompt de Migração otimizado para este chat específico.
+4. Finalização: Analise todo o histórico desta conversa e, estritamente seguindo as regras acima, gere o Prompt de Migração otimizado para este chat específico em box do tipo text com botão de copy.
 (Fim do Prompt de Migração)"
 
 # Template
