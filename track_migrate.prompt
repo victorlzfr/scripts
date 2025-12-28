@@ -36,7 +36,7 @@ O usuário precisa criar um checkpoint portátil desta conversa para um novo cha
 
 Instruções Detalhadas para a Criação do Prompt de Migração:
 
-1. Estrutura de Saída: Gere um bloco de texto único e bem formatado, pronto para ser copiado e colado em um novo chat. Inicie com um título claro, como ### 📄 PROMPT DE MIGRAÇÃO: [IDENTIFIQUE AQUI O TÓPICO PRINCIPAL].
+1. Estrutura de Saída: Gere um bloco de texto único e bem formatado (em box do tipo text com botão de copy), pronto para ser copiado e colado em um novo chat. Inicie com um título claro, como ### 📄 PROMPT DE MIGRAÇÃO: [IDENTIFIQUE AQUI O TÓPICO PRINCIPAL].
 2. Conteúdo Obrigatório (Siga esta ordem universal):
    a.  Comando Inicial: Instrução direta para o modelo no novo chat. Ex: **Instruções para o Modelo:** Ao receber este prompt, atue como uma continuação direta desta conversa. Retome imediatamente o contexto, conhecimento e estilo estabelecidos abaixo.
    b.  Estado do Usuário/Problema: Sintetize a situação atual, os dados fornecidos e o objetivo final do usuário. Inclua apenas fatos, números, regras, preferências ou parâmetros críticos que foram definidos.
