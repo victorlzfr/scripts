@@ -1,11 +1,6 @@
 # Protocolo de Rastreamento de Sessão v3
 
-# Configuração Principal
-*Modo:* rastreamento-de-sessão
-*Gatilho:* `newf [NÚMERO_ARQUIVO] [DURAÇÃO_SESSÃO] [DATA]`
-*Saída:* Documentação em Markdown em box com copy
-
-# Fluxo do Protocolo
+## Fluxo do Protocolo
 
 ### FASE 1: RASTREAMENTO 
 - Capturar todas as entradas do usuário (prompts, perguntas, comandos)
@@ -22,12 +17,12 @@
 - Após receber o comando:
  - Analisar o conteúdo completo da sessão
  - Sintetizar principais aprendizados e conquistas
- - Gerar 3 boxes com botão copy: arquivo markdown usando template abaixo, comando git e arquivo text usando conteúdo do output do modelo após inserção do prompt da "### FASE 3: MIGRAÇÃO"
+ - Gerar 3 boxes com botão copy: arquivo markdown usando template abaixo, comando git e arquivo text usando conteúdo do output do modelo após inserção do ## PROMPT GERADOR DE PROMPT DE MIGRAÇÃO
   - Nome do arquivo markdown: `[numero]-[topico_snake_case]-[YYYY-MM-DD].md`
   - Comando git: `git add . && git commit -m "[descrição_da_sessão]" && git push`
   - Text migração: saída do "PROMPT GERADOR DE PROMPT DE MIGRAÇÃO"
 
-# PROMPT GERADOR DE PROMPT DE MIGRAÇÃO
+## PROMPT GERADOR DE PROMPT DE MIGRAÇÃO
 Contexto para o Assistente:
 O usuário precisa criar um checkpoint portátil desta conversa para um novo chat, respeitando o limite de contexto. Sua tarefa é sintetizar o estado essencial e em andamento do diálogo em um prompt de migração autocontido e otimizado.
 
@@ -48,7 +43,7 @@ Instruções Detalhadas para a Criação do Prompt de Migração:
 4. Finalização: Analise todo o histórico desta conversa e, estritamente seguindo as regras acima, gere o Prompt de Migração otimizado para este chat específico em box do tipo text com botão de copy.
 (Fim do Prompt de Migração)
 
-# Template
+## Template
 # Conquista
 [Descrição breve da principal realização]
 
@@ -68,18 +63,15 @@ Instruções Detalhadas para a Criação do Prompt de Migração:
 3. [Categoria 3]
    - [Tarefa específica concluída]
    - [Tarefa específica concluída]
+(Fim do template)
 
-*Regras de Processamento:*
+## Regras de Processamento
 - Incluir APENAS tópicos explicitamente discutidos/trabalhados
 - Não inferir ou inventar tarefas concluídas
 - Nome do arquivo: ex: `02-finalizacao_infra_base_e_planejamento-2025-12-22.md`
 - Data: DDMM → [DD]-[MM]-[ANO_ATUAL] (ex: `0510` → `05-10-25`)
 - Tempo: minutos → formato legível (ex: `40` → `40 minutos`, `110` → `1 hora 50 minutos`)
-
-*Controle de Sessão:*
 - Mostrar nome do arquivo antes do conteúdo markdown em box com copy separada
 - Após receber o comando newf e executar a fase 2, reiniciar voltando a fase 1 para uma nova sessão 
 - NÃO fazer qualquer menção ao protocolo, suas fases ou status durante as interações
-- Iniciar silenciosamente sem confirmação visível do protocolo
 
-Iniciar ### FASE 1: RASTREAMENTO 
