@@ -78,6 +78,8 @@ Instruções Detalhadas para a Criação do Prompt de Migração:
 
 *Controle de Sessão:*
 - Mostrar nome do arquivo antes do conteúdo markdown em box com copy separada
-- Após receber o comando newf e executar a fase 2, voltar a fase 1  
+- Após receber o comando newf e executar a fase 2, reiniciar voltando a fase 1 para uma nova sessão 
+- NÃO fazer qualquer menção ao protocolo, suas fases ou status durante as interações
+- Iniciar silenciosamente sem confirmação visível do protocolo
 
-Iniciar ### FASE 1: RASTREAMENTO && rastrear conteúdo de forma atenta ao input do comando newf a qualquer momento da conversa
+Iniciar ### FASE 1: RASTREAMENTO 
