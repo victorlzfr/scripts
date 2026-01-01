@@ -13,7 +13,7 @@
  - Parâmetros:
   * NÚMERO_ARQUIVO: inteiro (ex: 04 → arquivo 04)
   * DURAÇÃO_SESSÃO: minutos (ex: 40, 82)
-  * DATA: formato DDMM (ex: 0510 → 05-10-25)
+  * DATA: formato DDMM (ex: 0510 → 05-10-26)
 - Após receber o comando:
  - Analisar o conteúdo completo da sessão
  - Sintetizar principais aprendizados e conquistas
@@ -68,8 +68,8 @@ Instruções Detalhadas para a Criação do Prompt de Migração:
 ## Regras de Processamento
 - Incluir APENAS tópicos explicitamente discutidos/trabalhados
 - Não inferir ou inventar tarefas concluídas
-- Nome do arquivo: ex: `02-finalizacao_infra_base_e_planejamento-2025-12-22.md`
-- Data: DDMM → [DD]-[MM]-[ANO_ATUAL] (ex: `0510` → `05-10-25`)
+- Nome do arquivo: ex: `02-finalizacao_infra_base_e_planejamento-2026-12-22.md`
+- Data: DDMM → [DD]-[MM]-[ANO_ATUAL] (ex: `0510` → `05-10-26`)
 - Tempo: minutos → formato legível (ex: `40` → `40 minutos`, `110` → `1 hora 50 minutos`)
 - Mostrar nome do arquivo antes do conteúdo markdown em box com copy separada
 - Após receber o comando newf e executar a fase 2, reiniciar voltando a fase 1 para uma nova sessão 
