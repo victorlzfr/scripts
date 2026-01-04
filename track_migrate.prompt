@@ -22,25 +22,39 @@
   - Comando git: `git add . && git commit -m "[descrição_da_sessão]" && git push`
   - Text migração: saída do "PROMPT GERADOR DE PROMPT DE MIGRAÇÃO"
 
-## PROMPT GERADOR DE PROMPT DE MIGRAÇÃO
+## PROMPT GERADOR DE PROMPT DE MIGRAÇÃO (VERSÃO FOCADA)
 Contexto para o Assistente:
-O usuário precisa criar um checkpoint portátil desta conversa para um novo chat, respeitando o limite de contexto. Sua tarefa é sintetizar o estado essencial e em andamento do diálogo em um prompt de migração autocontido e otimizado.
+O usuário precisa criar um checkpoint portátil exclusivamente para recuperação de contexto em um novo chat. O único objetivo é transferir o estado essencial da conversa atual de forma condensada, sem prescrições sobre próximas ações.
 
-Instruções Detalhadas para a Criação do Prompt de Migração:
+Instruções para Criação do Prompt de Migração:
 
-1. Estrutura de Saída: Gere um bloco de texto único e bem formatado (em box do tipo text com botão de copy), pronto para ser copiado e colado em um novo chat. Inicie com um título claro, como ### PROMPT DE MIGRAÇÃO: [IDENTIFIQUE AQUI O TÓPICO PRINCIPAL].
-2. Conteúdo Obrigatório (Siga esta ordem universal):
-   a.  Comando Inicial: Instrução direta para o modelo no novo chat. Ex: **Instruções para o Modelo:** Ao receber este prompt, atue como uma continuação direta desta conversa. Retome imediatamente o contexto, conhecimento e estilo estabelecidos abaixo.
-   b.  Estado do Usuário/Problema: Sintetize a situação atual, os dados fornecidos e o objetivo final do usuário. Inclua apenas fatos, números, regras, preferências ou parâmetros críticos que foram definidos.
-   c.  Histórico de Decisões e Estado Atual do Projeto: Resuma onde as coisas pararam. Qual foi a última conclusão? Qual problema está sendo resolvido? Qual é a próxima etapa lógica? Liste decisões-chave já tomadas.
-   d.  Próximos Passos Imediatos: Enumere 3-5 ações, tópicos ou decisões concretas que são os próximos na fila para serem abordados. Isso direciona a continuidade de forma prática.
-   e.  Preferências de Estilo e Formato: Descreva como o usuário prefere interagir (ex: tom técnico ou casual, uso de analogias, necessidade de listas, tabelas, diagramas, nível de detalhe).
-3. Princípios de Redação (Não Negociáveis):
-   · Extração, Não Interpretação: Colete e condense apenas informações explicitamente fornecidas pelo usuário. Não deduza, adicione ou "melhore" os dados.
-   · Concisão com Precisão: Seja denso. Remova toda narrativa, repetição e diálogo casual. Mantenha apenas o que é crítico para retomar o trabalho.
-   · Formatação para Análise: Use formatação leve (como **negrito** para rótulos e - para listas) para estruturar a informação e facilitar a análise pelo modelo no novo chat.
-   · Foco no Futuro: A ênfase deve estar em "o que precisamos fazer a seguir" mais do que em "tudo o que já foi dito".
-4. Finalização: Analise todo o histórico desta conversa e, estritamente seguindo as regras acima, gere o Prompt de Migração otimizado para este chat específico em box do tipo text com botão de copy.
+1. Estrutura de Saída:
+   - Gere UM único bloco de texto em uma caixa com botão de cópia.
+   - Título: ### CHECKPOINT DE CONTEXTO: [TÓPICO PRINCIPAL]
+
+2. Conteúdo Obrigatório (APENAS estes elementos):
+   a. Instrução de Contextualização:
+      **Ao receber este checkpoint:** Retome imediatamente o contexto, conhecimento, estado e estilo estabelecidos abaixo.
+   
+   b. Estado Atual do Usuário/Problema:
+      Sintetize apenas fatos explícitos: objetivo final, dados fornecidos, números, regras, parâmetros definidos, preferências declaradas.
+   
+   c. Estado da Conversa/Projeto:
+      Resuma onde a interação parou: última conclusão, problema sendo resolvido no momento, decisões-chave já tomadas (listadas pontualmente).
+   
+   d. Preferências de Estilo e Formato:
+      Descreva apenas o modo de interação explicitamente solicitado pelo usuário (tom, formato de respostas, uso de exemplos/analogias, nível de detalhe).
+
+3. Princípios de Redação (Rígidos):
+   - Extração Pura: Colete apenas informações explicitamente fornecidas pelo usuário. Zero inferências.
+   - Máxima Densidade: Remova todo diálogo casual, repetições e narrativa. Mantenha apenas o essencial para retomar.
+   - Formatação Leve: Use **negrito** para rótulos e - para listas. Estruture para fácil análise pelo modelo.
+   - Foco no Estado, Não no Futuro: O prompt deve capturar o que é (contexto atual), não o que fazer a seguir.
+
+4. Finalização:
+   - Analise todo o histórico.
+   - Siga estritamente as regras acima.
+   - Gere apenas o bloco de texto do checkpoint na caixa com botão de cópia.
 (Fim do Prompt de Migração)
 
 ## Template
