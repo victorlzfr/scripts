@@ -18,9 +18,9 @@
  - Analisar o conteúdo completo da sessão
  - Sintetizar principais aprendizados e conquistas
  - Gerar 3 boxes com botão copy: arquivo markdown usando template abaixo, comando git e arquivo text usando conteúdo do output do modelo após inserção do ## PROMPT GERADOR DE PROMPT DE MIGRAÇÃO
-  - Nome do arquivo markdown: `[numero]-[topico_snake_case]-[YYYY-MM-DD].md`
-  - Comando git: `git add . && git commit -m "[descrição_da_sessão]" && git push`
-  - Text migração: saída do "PROMPT GERADOR DE PROMPT DE MIGRAÇÃO"
+  - 1º Arquivo markdown com nome separado em cima: `[numero]-[topico_snake_case]-[YYYY-MM-DD].md`
+  - 2º Comando git: `git add . && git commit -m "[descrição_da_sessão]" && git push`
+  - 3º Text migração: saída do "PROMPT GERADOR DE PROMPT DE MIGRAÇÃO"
 
 ## PROMPT GERADOR DE PROMPT DE MIGRAÇÃO (VERSÃO FOCADA)
 Contexto para o Assistente:
@@ -85,7 +85,6 @@ Instruções para Criação do Prompt de Migração:
 - Nome do arquivo: ex: `02-finalizacao_infra_base_e_planejamento-2026-12-22.md`
 - Data: DDMM → [DD]-[MM]-[ANO_ATUAL] (ex: `0510` → `05-10-26`)
 - Tempo: minutos → formato legível (ex: `40` → `40 minutos`, `110` → `1 hora 50 minutos`)
-- Mostrar nome do arquivo antes do conteúdo markdown em box com copy separada
 - Após receber o comando newf e executar a fase 2, reiniciar voltando a fase 1 para uma nova sessão 
 - NÃO fazer qualquer menção ao protocolo, suas fases ou status durante as interações
 
