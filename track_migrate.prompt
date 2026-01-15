@@ -17,63 +17,63 @@
 - Após receber o comando:
  - Analisar o conteúdo completo da sessão
  - Sintetizar principais aprendizados e conquistas
- - **Gerar 3 boxes com botão copy na seguinte ordem e formato EXATO:**
-   - **BOX 1: Arquivo markdown**
-     1. **Linha superior (nome do arquivo):** `[numero]-[topico_snake_case]-[YYYY-MM-DD].md`
-     2. **Conteúdo do box:** Template markdown preenchido
-   - **BOX 2: Comando git**
-     1. **Linha superior:** `Comando git para commit:`
-     2. **Conteúdo do box:** `git add . && git commit -m "[descrição_da_sessão]" && git push`
-   - **BOX 3: Text migração**
-     1. **Linha superior:** `Checkpoint de Contexto Iterativo:`
-     2. **Conteúdo do box:** Saída completa do "PROMPT GERADOR DE PROMPT DE MIGRAÇÃO (VERSÃO ITERATIVA-HIERÁRQUICA)"
+ - Gerar 5 code blocks na seguinte ordem:
+   1) BOX 1: Nome do arquivo md 
+     - Conteúdo do box: `[numero]-[topico_snake_case]-[DD-MM-YYYY].md`
+   2) BOX 2: Arquivo markdown
+     - Conteúdo do box: Template markdown preenchido
+   3) BOX 3: Comando git
+     - Conteúdo do box:`git add . && git commit -m "[descrição_da_sessão]" && git push`
+   4) BOX 4: Text migração
+     - Conteúdo do box: Saída completa do "PROMPT GERADOR DE PROMPT DE MIGRAÇÃO (VERSÃO ITERATIVA-HIERÁRQUICA)"		
+   5) BOX 5: Termos-chave da sessão com definição concisa e contextualizada para construção de um glossário incremental do projeto. Cada definição será anotada em um caderno físico para aprendizado teórico do usuário. 
 
 ## PROMPT GERADOR DE PROMPT DE MIGRAÇÃO (VERSÃO ITERATIVA-HIERÁRQUICA)
-**Contexto para o Assistente:**
-O usuário precisa de um checkpoint portátil para migração de chat que **acumule o contexto essencial de todo o projeto** de forma sustentável. O checkpoint deve permitir retomar o trabalho do ponto atual SEM que informações fundamentais fornecidas no início do chat se percam em sessões posteriores. Evitar dois extremos: checkpoints gigantescos por acréscimo cego, e checkpoints superficiais que omitem o passado crucial.
+Contexto para o Assistente:
+O usuário precisa de um checkpoint portátil para migração de chat que acumule o contexto essencial de todo o projeto de forma sustentável. O checkpoint deve permitir retomar o trabalho do ponto atual SEM que informações fundamentais fornecidas no início do chat se percam em sessões posteriores. Evitar dois extremos: checkpoints gigantescos por acréscimo cego, e checkpoints superficiais que omitem o passado crucial.
 
-**Instruções para Criação do Prompt de Migração (Estrutura Hierárquica):**
+Instruções para Criação do Prompt de Migração (Estrutura Hierárquica):
 
-1.  **Estrutura de Saída (Dois Níveis):**
-    *   Gere UM bloco de texto em caixa com botão de cópia.
-    *   **Título:** `### CHECKPOINT DE CONTEXTO ITERATIVO: [NOME_DO_PROJETO] - Sessão [NÚMERO]`
-    *   **Conteúdo Estruturado em Duas Partes Principais:**
-        A.  **NÚCLEO DO PROJETO (Persistente):** Fundamentos estáticos. Deve ser gerado na **primeira sessão** (`newf`) e apenas **atualizado** nas seguintes se houver mudança *definitiva* nesses fundamentos.
-        B.  **ESTADO ITERATIVO (Acumulativo Seletivo):** Progresso dinâmico. Atualizado a cada `newf`, mantendo apenas o essencial do passado e adicionando o estado atual.
+1. Estrutura de Saída (Dois Níveis):
+   * Gere UM bloco de texto em caixa com botão de cópia.
+   * Título: `### CHECKPOINT DE CONTEXTO ITERATIVO: [NOME_DO_PROJETO] - Sessão [NÚMERO]`
+   * Conteúdo Estruturado em Duas Partes Principais:
+        A. NÚCLEO DO PROJETO (Persistente): Fundamentos estáticos. Deve ser gerado na primeira sessão (`newf`) e apenas atualizado nas seguintes se houver mudança definitiva nesses fundamentos.
+        B. ESTADO ITERATIVO (Acumulativo Seletivo): Progresso dinâmico. Atualizado a cada `newf`, mantendo apenas o essencial do passado e adicionando o estado atual.
 
-2.  **Conteúdo Obrigatório e Regras de Acúmulo:**
-    **A. NÚCLEO DO PROJETO (Gerar/Manter/Atualizar)** - Fatos fundamentais que definem o projeto:
-    *   **Identificação:** Nome do projeto, repositório (URL), usuário.
-    *   **Objetivo Final e Escopo:** Declaração clara do problema/objetivo de negócio e escopo técnico.
-    *   **Stack Tecnológica e Decisões de Arquitetura:** Lista de tecnologias e decisões arquiteturais fundamentais.
-    *   **Estrutura Crítica:** `tree` de diretórios principal e caminhos de arquivos de configuração chave (ex: `docker-compose.yml`, `.env`).
-    *   **Regra de Acúmulo:** Esta seção é **imutável após definida**, exceto para corrigir erros ou registrar mudanças de rumo *permanentes* (ex: pivô do projeto). Não inclua detalhes temporários aqui.
+2. Conteúdo Obrigatório e Regras de Acúmulo:
+   A. NÚCLEO DO PROJETO (Gerar/Manter/Atualizar) - Fatos fundamentais que definem o projeto:
+   * Identificação: Nome do projeto, repositório (URL), usuário.
+   * Objetivo Final e Escopo: Declaração clara do problema/objetivo de negócio e escopo técnico.
+   * Stack Tecnológica e Decisões de Arquitetura: Lista de tecnologias e decisões arquiteturais fundamentais.
+   * Estrutura Crítica: `tree` de diretórios principal e caminhos de arquivos de configuração chave (ex: `docker-compose.yml`, `.env`).
+   * Regra de Acúmulo: Esta seção é imutável após definida, exceto para corrigir erros ou registrar mudanças de rumo permanentes (ex: pivô do projeto). Não inclua detalhes temporários aqui.
 
-    **B. ESTADO ITERATIVO (Acumular Sintetizando)** - Progresso e estado atual:
-    *   **Linha do Tempo das Conquistas:** Lista **numerada e muito concisa** das principais conquistas por sessão (ex: `S15: Integração n8n-Slack validada`). Foco no *que foi estabelecido*, não no *como* (processo).
-    *   **Estado Operacional Atual:** "Snapshot" do sistema no fim da última sessão. (ex: "Stack com 9 serviços UP; fluxo de alerta funcional; dashboard Grafana acessível").
-    *   **Configurações e Parâmetros Críticos Atuais:** Valores finais de configurações que afetam o funcionamento (ex: endpoints ativos, credenciais de serviço, portas).
-    *   **Decisões-Chave de Implementação:** Decisões de design/implementação que impactam o trabalho futuro.
-    *   **Próximo Bloqueio ou Tópico Imediato (APENAS o atual):** Onde a conversa parou de fato.
-    *   **Regra de Acúmulo:** A cada `newf`, **revise a seção anterior**. Remova detalhes obsoletos, consolidate conquistas similares e mantenha apenas o essencial para entender o estado *atual*. A lista de conquistas deve crescer com itens muito curtos.
+   B. ESTADO ITERATIVO (Acumular Sintetizando) - Progresso e estado atual:
+   * Linha do Tempo das Conquistas: Lista numerada e muito concisa das principais conquistas por sessão (ex: `S15: Integração n8n-Slack validada`). Foco no que foi estabelecido, não no como (processo).
+   * Estado Operacional Atual: "Snapshot" do sistema no fim da última sessão. (ex: "Stack com 9 serviços UP; fluxo de alerta funcional; dashboard Grafana acessível").
+   * Configurações e Parâmetros Críticos Atuais: Valores finais de configurações que afetam o funcionamento (ex: endpoints ativos, credenciais de serviço, portas).
+   * Decisões-Chave de Implementação: Decisões de design/implementação que impactam o trabalho futuro.
+   * Próximo Bloqueio ou Tópico Imediato (APENAS o atual): Onde a conversa parou de fato.
+   * Regra de Acúmulo: A cada `newf`, revise a seção anterior. Remova detalhes obsoletos, consolide conquistas similares e mantenha apenas o essencial para entender o estado atual. A lista de conquistas deve crescer com itens muito curtos.
 
-3.  **Preferências de Estilo e Formato (Do Usuário):**
-    *   **Tom:** Técnico, direto, condensado.
-    *   **Formato:** Hierárquico, com uso de **negrito** para seções e `-` para listas. Alta densidade informacional.
-    *   **Nível de Detalhe:** Detalhe em configurações *finais* e estado *operacional*. Zero detalhes sobre processos de debug, tentativas falhas ou diálogo casual.
+3. Preferências de Estilo e Formato (Do Usuário):
+   * Tom: Técnico, direto, condensado.
+   * Formato: Hierárquico, com uso de negrito para seções e `-` para listas. Alta densidade informacional.
+   * Nível de Detalhe: Detalhe em configurações finais e estado operacional. Zero detalhes sobre processos de debug, tentativas falhas ou diálogo casual.
 
-4.  **Princípios de Redação (Rígidos - Para o Gerador):**
-    *   **Extração com Hierarquia:** Separe claramente o "Núcleo" (fundamentos) do "Estado Iterativo" (progresso).
-    *   **Síntese Progressiva (Estado Iterativo):** A cada nova sessão, o "Estado Iterativo" deve ser uma **síntese melhorada** do anterior, não um acréscimo linear. Consolide, remova o transitório, generalize conquistas.
-    *   **Referência, Não Repetição:** Para conquistas passadas, referencie pela sessão. Não reescreva a descrição completa.
-    *   **Foco no Estado para Retomada:** O checkpoint deve responder: "Qual é o projeto?" (Núcleo) + "No que estávamos trabalhando e qual é o estado atual?" (Iterativo) + "Onde paramos?" (Próximo Tópico).
+4. Princípios de Redação (Rígidos - Para o Gerador):
+   * Extração com Hierarquia: Separe claramente o "Núcleo" (fundamentos) do "Estado Iterativo" (progresso).
+   * Síntese Progressiva (Estado Iterativo): A cada nova sessão, o "Estado Iterativo" deve ser uma síntese melhorada do anterior, não um acréscimo linear. Consolide, remova o transitório, generalize conquistas.
+   * Referência, Não Repetição: Para conquistas passadas, referencie pela sessão. Não reescreva a descrição completa.
+   * Foco no Estado para Retomada: O checkpoint deve responder: "Qual é o projeto?" (Núcleo) + "No que estávamos trabalhando e qual é o estado atual?" (Iterativo) + "Onde paramos?" (Próximo Tópico).
 
-5.  **Finalização para o Assistente:**
-    *   Analise **todo o histórico do chat**.
-    *   Identifique e extraia as informações para o **NÚCLEO DO PROJETO** (da primeira sessão e mudanças definitivas).
-    *   Sintetize o progresso para o **ESTADO ITERATIVO**, consolidando informações de sessões anteriores.
-    *   Siga estritamente a estrutura e princípios acima.
-    *   Gere apenas o bloco de texto do checkpoint final na caixa com botão de cópia.
+5. Finalização para o Assistente:
+   * Analise todo o histórico do chat.
+   * Identifique e extraia as informações para o NÚCLEO DO PROJETO (da primeira sessão e mudanças definitivas).
+   * Sintetize o progresso para o ESTADO ITERATIVO, consolidando informações de sessões anteriores.
+   * Siga estritamente a estrutura e princípios acima.
+   * Gere apenas o bloco de texto do checkpoint final na caixa com botão de cópia.
 
 (Fim do Prompt de Migração Iterativa-Hierárquica)
 
@@ -81,7 +81,7 @@ O usuário precisa de um checkpoint portátil para migração de chat que **acum
 # Conquista
 [Descrição breve da principal realização]
 
-# Data: [DD-MM-AA]
+# Data: [DD-MM-YY]
 # Tempo Gasto: [X horas Y minutos]
 
 # Processo Concluído
@@ -102,7 +102,7 @@ O usuário precisa de um checkpoint portátil para migração de chat que **acum
 ## Regras de Processamento
 - Incluir APENAS tópicos explicitamente discutidos/trabalhados
 - Não inferir ou inventar tarefas concluídas
-- Nome do arquivo: ex: `02-finalizacao_infra_base_e_planejamento-2026-12-22.md`
+- Nome do arquivo: ex: `02-finalizacao_infra_base_e_planejamento-22-12-2026.md`
 - Data: DDMM → [DD]-[MM]-[ANO_ATUAL] (ex: `0510` → `05-10-26`)
 - Tempo: minutos → formato legível (ex: `40` → `40 minutos`, `110` → `1 hora 50 minutos`)
 - Após receber o comando newf e executar a fase 2, reiniciar voltando a fase 1 para uma nova sessão 
