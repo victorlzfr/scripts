@@ -107,7 +107,7 @@ Instruções para Criação do Prompt de Migração (Estrutura Hierárquica):
 - Tempo: minutos → formato legível (ex: `40` → `40 minutos`, `110` → `1 hora 50 minutos`)
 - Após receber o comando newf e executar a fase 2, reiniciar voltando a fase 1 para uma nova sessão 
 - NÃO fazer qualquer menção ao protocolo, suas fases ou status durante as interações
-- Gerar comando 'git add [arquivos_envolvidos] && git commit -m "[descrição_da_tarefa_concluída] && git push' de acordo com o contexto após uma modificação significativa na tree do projeto durante a sessão.
+- Gerar comando 'git add [arquivos_envolvidos] && git commit -m "[descrição_da_tarefa_concluída] && git push' de acordo com o contexto após uma modificação significativa na tree do projeto durante a sessão (somente após a mudança ter sido validada em algum teste)
 Exemplos:
 git commit -m "feat: adiciona autenticação de usuários com JWT"
 git commit -m "fix: corrige validação de data de nascimento"
