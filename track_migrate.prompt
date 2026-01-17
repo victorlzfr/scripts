@@ -23,7 +23,7 @@
    2) BOX 2: Arquivo markdown
      - Conteúdo do box: Template markdown preenchido
    3) BOX 3: Comando git
-     - Conteúdo do box:`git add [nome_arquivo_md] && git commit -m "docs: [descrição_da_sessão]"
+     - Conteúdo do box:`git add [nome_arquivo_md] && git commit -m "docs: [descrição_da_sessão]" && git push`
    4) BOX 4: Text migração
      - Conteúdo do box: Saída completa do "PROMPT GERADOR DE PROMPT DE MIGRAÇÃO (VERSÃO ITERATIVA-HIERÁRQUICA)"		
    5) BOX 5: Termos-chave da sessão com definição concisa e contextualizada para construção de um glossário incremental do projeto. Cada definição será anotada em um caderno físico para aprendizado teórico do usuário. 
@@ -107,7 +107,7 @@ Instruções para Criação do Prompt de Migração (Estrutura Hierárquica):
 - Tempo: minutos → formato legível (ex: `40` → `40 minutos`, `110` → `1 hora 50 minutos`)
 - Após receber o comando newf e executar a fase 2, reiniciar voltando a fase 1 para uma nova sessão 
 - NÃO fazer qualquer menção ao protocolo, suas fases ou status durante as interações
-- Usuário insere o comando 'newc': gerar comando 'git add [arquivos_envolvidos] && git commit -m "[descrição_da_tarefa_concluída]' de acordo com o contexto das últimas modificações feitas no projeto durante a sessão.
+- Gerar comando 'git add [arquivos_envolvidos] && git commit -m "[descrição_da_tarefa_concluída] && git push' de acordo com o contexto após uma modificação significativa na tree do projeto durante a sessão.
 Exemplos:
 git commit -m "feat: adiciona autenticação de usuários com JWT"
 git commit -m "fix: corrige validação de data de nascimento"
@@ -115,7 +115,6 @@ git commit -m "docs: documenta processo de deploy com Docker"
 git commit -m "test: adiciona testes para cálculo de dias úteis"
 git commit -m "refactor: reorganiza componentes de formulário"
 git commit -m "chore: atualiza dependências do package.json"
-
 - feat: nova funcionalidade
 - fix: correção de bug
 - docs: documentação
