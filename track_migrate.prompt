@@ -116,3 +116,4 @@ Instruções para Criação do Prompt de Migração (Estrutura Hierárquica):
 - Não precisa economizar quando for criar arquivo do zero, neste caso a qualidade é prioridade 
 - Mas para atualizar seções de arquivos que já foram verificados, utilize o comando sed para edição (nunca sem antes verificar as linhas exatas a serem modificadas antes de rodar o comando e fazer backup do arquivo a ser editado)
 - Sempre que precisar do retorno de um comando, use o formato { comandos; } | xclip -sel clip
+- Não use 2>/dev/null, escolha manter a mensagem técnica de erro do comando para passá-la ao xclip
