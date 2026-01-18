@@ -20,16 +20,17 @@
  - Gerar 6 code blocks separados na seguinte ordem:
    1) Box 1: Commits setorizados
      - Conteúdo do box: identifique os arquivos no último comando 'gs --untracked-files=all' constando no chat para setorizar e listar os commits da sessão na box 
-   2) BOX 2: Nome do arquivo md 
+   2) BOX 2: Nome do arquivo .md da sessao 
      - Conteúdo do box: `[numero]-[topico_snake_case]-[DD-MM-YYYY].md`
    3) BOX 3: Arquivo markdown
      - Conteúdo do box: Template markdown preenchido
-   4) BOX 4: Comando git
-     - Conteúdo do box:`git add [nome_arquivo_md] && git commit -m "docs: [descrição_da_sessão]" && git push`
+   4) BOX 4: Comando git docs exclusivo
+     - Conteúdo do box:`git add [nome_arquivo_md_sessao] && git commit -m "docs: [descrição_da_sessão]" && git push`
    5) BOX 5: Text migração
      - Conteúdo do box: Saída completa do "PROMPT GERADOR DE PROMPT DE MIGRAÇÃO (VERSÃO ITERATIVA-HIERÁRQUICA)"		
-   6) BOX 6: Termos-chave da sessão com definição detalhada mas concisa e contextualizada para construção de um glossário incremental do projeto. Cada definição será anotada em um caderno físico para aprendizado teórico do usuário. 
-
+   6) BOX 6: Termos-chave da sessão 
+     - Conteúdo do box: Termos-chave da sessão com definição detalhada mas concisa e contextualizada para construção de um glossário incremental do projeto. Cada definição será anotada em um caderno físico para aprendizado teórico do usuário.
+ 
 ## PROMPT GERADOR DE PROMPT DE MIGRAÇÃO (VERSÃO ITERATIVA-HIERÁRQUICA)
 Contexto para o Assistente:
 O usuário precisa de um checkpoint portátil para migração de chat que acumule o contexto essencial de todo o projeto de forma sustentável. O checkpoint deve permitir retomar o trabalho do ponto atual SEM que informações fundamentais fornecidas no início do chat se percam em sessões posteriores. Evitar dois extremos: checkpoints gigantescos por acréscimo cego, e checkpoints superficiais que omitem o passado crucial.
@@ -109,11 +110,4 @@ Instruções para Criação do Prompt de Migração (Estrutura Hierárquica):
 - Tempo: minutos → formato legível (ex: `40` → `40 minutos`, `110` → `1 hora 50 minutos`)
 - Após receber o comando newf e executar a fase 2, reiniciar voltando a fase 1 para uma nova sessão 
 - NÃO fazer qualquer menção ao protocolo, suas fases ou status durante as interações
-- Formato dos commits setorizados: 'git add [arquivos_envolvidos] && git commit -m "[descrição_da_tarefa_concluída] && git push'
-Exemplos:
-git commit -m "feat: adiciona autenticação de usuários com JWT"
-git commit -m "fix: corrige validação de data de nascimento"
-git commit -m "docs: documenta processo de deploy com Docker"
-git commit -m "test: adiciona testes para cálculo de dias úteis"
-git commit -m "refactor: reorganiza componentes de formulário"
-git commit -m "chore: atualiza dependências do package.json"
+- Formato dos commits setorizados: 'git add [arquivos_envolvidos] && git commit -m "[prefix: descrição_da_tarefa_concluída]" && git push'
