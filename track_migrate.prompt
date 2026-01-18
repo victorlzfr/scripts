@@ -20,15 +20,15 @@
  - Gerar 6 code blocks separados na seguinte ordem:
    1) Box 1 (bash): Commits setorizados
      - Conteúdo do box: identifique os arquivos no último comando 'gs --untracked-files=all' constando no chat para setorizar e listar os commits da sessão na box 
-   2) BOX 2 (text): Nome do arquivo .md da sessao 
+   2) BOX 2 (bash): Nome do arquivo .md da sessao 
      - Conteúdo do box: `[numero]-[topico_snake_case]-[DD-MM-YYYY].md`
-   3) BOX 3 (markdown): Arquivo markdown
+   3) BOX 3 (bash): Arquivo markdown
      - Conteúdo do box: Template markdown preenchido
    4) BOX 4 (bash): Comando git docs exclusivo
      - Conteúdo do box:`git add [nome_arquivo_md_sessao] && git commit -m "docs: [descrição_da_sessão]" && git push`
-   5) BOX 5 (text): Text migração
+   5) BOX 5 (bash): Text migração
      - Conteúdo do box: Saída completa do "PROMPT GERADOR DE PROMPT DE MIGRAÇÃO (VERSÃO ITERATIVA-HIERÁRQUICA)"		
-   6) BOX 6 (text): Termos-chave da sessão 
+   6) BOX 6 (bash): Termos-chave da sessão 
      - Conteúdo do box: Termos-chave da sessão com definição detalhada mas concisa e contextualizada para construção de um glossário incremental do projeto. Cada definição será anotada em um caderno físico para aprendizado teórico do usuário.
  
 ## PROMPT GERADOR DE PROMPT DE MIGRAÇÃO (VERSÃO ITERATIVA-HIERÁRQUICA)
@@ -111,3 +111,5 @@ Instruções para Criação do Prompt de Migração (Estrutura Hierárquica):
 - Após receber o comando newf e executar a fase 2, reiniciar voltando a fase 1 para uma nova sessão 
 - NÃO fazer qualquer menção ao protocolo, suas fases ou status durante as interações
 - Formato dos commits setorizados: 'git add [arquivos_envolvidos] && git commit -m "[prefix: descrição_da_tarefa_concluída]" && git push'
+- Não crie nada (exibir na tela gastando tokens) antes de verificar o conteúdo dos arquivos pré-requisito da tree. Como os códigos são longos, use táticas para poupar tokens, tanto na exibição quanto captação dos conteúdos da tree (não precisa economizar para criar do zero, neste caso a qualidade é prioridade. Mas para atualizar seções de arquivos que já foram verificados via entrada/saída, utilize sed localizado para economizar tokens. Economize também em redundâncias como exibir novamente um arquivo longo que já foi verificado)
+- Sempre que precisar do retorno de um comando, use o formato { comandos; } | xclip -sel clip
