@@ -17,18 +17,18 @@
 - Após receber o comando:
  - Analisar o conteúdo completo da sessão
  - Sintetizar principais aprendizados e conquistas
- - Gerar 5 code blocks na seguinte ordem:
+ - Gerar 6 code blocks separados na seguinte ordem:
    1) Box 1: Commits setorizados
      - Conteúdo do box: identifique os arquivos no último comando 'gs --untracked-files=all' constando no chat para setorizar e listar os commits da sessão na box 
-   1) BOX 1: Nome do arquivo md 
+   2) BOX 2: Nome do arquivo md 
      - Conteúdo do box: `[numero]-[topico_snake_case]-[DD-MM-YYYY].md`
-   2) BOX 2: Arquivo markdown
+   3) BOX 3: Arquivo markdown
      - Conteúdo do box: Template markdown preenchido
-   3) BOX 3: Comando git
+   4) BOX 4: Comando git
      - Conteúdo do box:`git add [nome_arquivo_md] && git commit -m "docs: [descrição_da_sessão]" && git push`
-   4) BOX 4: Text migração
+   5) BOX 5: Text migração
      - Conteúdo do box: Saída completa do "PROMPT GERADOR DE PROMPT DE MIGRAÇÃO (VERSÃO ITERATIVA-HIERÁRQUICA)"		
-   5) BOX 5: Termos-chave da sessão com definição concisa e contextualizada para construção de um glossário incremental do projeto. Cada definição será anotada em um caderno físico para aprendizado teórico do usuário. 
+   6) BOX 6: Termos-chave da sessão com definição concisa e contextualizada para construção de um glossário incremental do projeto. Cada definição será anotada em um caderno físico para aprendizado teórico do usuário. 
 
 ## PROMPT GERADOR DE PROMPT DE MIGRAÇÃO (VERSÃO ITERATIVA-HIERÁRQUICA)
 Contexto para o Assistente:
