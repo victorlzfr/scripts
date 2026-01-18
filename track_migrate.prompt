@@ -57,7 +57,7 @@ Instruções para Criação do Prompt de Migração (Estrutura Hierárquica):
    * Estado Operacional Atual: "Snapshot" do sistema no fim da última sessão. (ex: "Stack com 9 serviços UP; fluxo de alerta funcional; dashboard Grafana acessível").
    * Configurações e Parâmetros Críticos Atuais: Valores finais de configurações que afetam o funcionamento (ex: endpoints ativos, credenciais de serviço, portas).
    * Decisões-Chave de Implementação: Decisões de design/implementação que impactam o trabalho futuro.
-   * Próximo Bloqueio ou Tópico Imediato (APENAS o atual): Onde a conversa parou de fato.
+   * Tópico Imediato: Onde a conversa parou de fato, com descrição da "Next task" para o próximo chat retomar iniando por ela.
    * Regra de Acúmulo: A cada `newf`, revise a seção anterior. Remova detalhes obsoletos, consolide conquistas similares e mantenha apenas o essencial para entender o estado atual. A lista de conquistas deve crescer com itens muito curtos.
 
 3. Preferências de Estilo e Formato (Do Usuário):
