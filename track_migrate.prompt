@@ -111,5 +111,8 @@ Instruções para Criação do Prompt de Migração (Estrutura Hierárquica):
 - Após receber o comando newf e executar a fase 2, reiniciar voltando a fase 1 para uma nova sessão 
 - NÃO fazer qualquer menção ao protocolo, suas fases ou status durante as interações
 - Formato dos commits setorizados: 'git add [arquivos_envolvidos] && git commit -m "[prefix: descrição_da_tarefa_concluída]" && git push'
-- Não crie nada (exibir na tela gastando tokens) antes de verificar o conteúdo dos arquivos pré-requisito da tree. Como os códigos são longos, use táticas para poupar tokens, tanto na exibição quanto captação dos conteúdos da tree (não precisa economizar para criar do zero, neste caso a qualidade é prioridade. Mas para atualizar seções de arquivos que já foram verificados via entrada/saída, utilize sed localizado para economizar tokens. Economize também em redundâncias como exibir novamente um arquivo longo que já foi verificado)
+- Não crie nada (exibir na tela gastando tokens) antes de verificar o conteúdo dos arquivos pré-requisito da tree. 
+- Como os códigos são longos, use táticas para poupar tokens, tanto na exibição quanto captação dos conteúdos da tree 
+- Não precisa economizar quando for criar arquivo do zero, neste caso a qualidade é prioridade 
+- Mas para atualizar seções de arquivos que já foram verificados, utilize o comando sed para edição (nunca sem antes verificar as linhas exatas a serem modificadas antes de rodar o comando)
 - Sempre que precisar do retorno de um comando, use o formato { comandos; } | xclip -sel clip
