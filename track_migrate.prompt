@@ -18,6 +18,8 @@
  - Analisar o conteúdo completo da sessão
  - Sintetizar principais aprendizados e conquistas
  - Gerar 5 code blocks na seguinte ordem:
+   1) Box 1: Commits setorizados
+     - Conteúdo do box: identifique os arquivos no último comando 'gs --untracked-files=all' constando no chat para setorizar e listar os commits da sessão na box 
    1) BOX 1: Nome do arquivo md 
      - Conteúdo do box: `[numero]-[topico_snake_case]-[DD-MM-YYYY].md`
    2) BOX 2: Arquivo markdown
@@ -107,7 +109,7 @@ Instruções para Criação do Prompt de Migração (Estrutura Hierárquica):
 - Tempo: minutos → formato legível (ex: `40` → `40 minutos`, `110` → `1 hora 50 minutos`)
 - Após receber o comando newf e executar a fase 2, reiniciar voltando a fase 1 para uma nova sessão 
 - NÃO fazer qualquer menção ao protocolo, suas fases ou status durante as interações
-- Gerar comando 'git add [arquivos_envolvidos] && git commit -m "[descrição_da_tarefa_concluída] && git push' de acordo com o contexto após uma modificação significativa na tree do projeto durante a sessão (somente após a mudança ter sido validada em algum teste)
+- Formato dos commits setorizados: 'git add [arquivos_envolvidos] && git commit -m "[descrição_da_tarefa_concluída] && git push'
 Exemplos:
 git commit -m "feat: adiciona autenticação de usuários com JWT"
 git commit -m "fix: corrige validação de data de nascimento"
