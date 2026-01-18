@@ -28,7 +28,7 @@
      - Conteúdo do box:`git add [nome_arquivo_md] && git commit -m "docs: [descrição_da_sessão]" && git push`
    5) BOX 5: Text migração
      - Conteúdo do box: Saída completa do "PROMPT GERADOR DE PROMPT DE MIGRAÇÃO (VERSÃO ITERATIVA-HIERÁRQUICA)"		
-   6) BOX 6: Termos-chave da sessão com definição concisa e contextualizada para construção de um glossário incremental do projeto. Cada definição será anotada em um caderno físico para aprendizado teórico do usuário. 
+   6) BOX 6: Termos-chave da sessão com definição detalhada mas concisa e contextualizada para construção de um glossário incremental do projeto. Cada definição será anotada em um caderno físico para aprendizado teórico do usuário. 
 
 ## PROMPT GERADOR DE PROMPT DE MIGRAÇÃO (VERSÃO ITERATIVA-HIERÁRQUICA)
 Contexto para o Assistente:
