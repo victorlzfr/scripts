@@ -100,7 +100,12 @@ Instruções para Criação do Prompt de Migração (Estrutura Hierárquica):
 3. [Categoria 3]
    - [Tarefa específica concluída]
    - [Tarefa específica concluída]
+
+X. [Termos-chave da sessão enumerados (sem definições, somente listagem)]
+   - Termo1, termo2, termo3, etc.
 (Fim do template)
+
+obs.: X é placeholder para o último número da categorização
 
 ## Regras de Processamento
 - Incluir APENAS tópicos explicitamente discutidos/trabalhados
