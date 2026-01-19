@@ -114,6 +114,26 @@ Instruções para Criação do Prompt de Migração (Estrutura Hierárquica):
 - Não crie nada (exibir na tela gastando tokens) antes de verificar o conteúdo dos arquivos pré-requisito da tree. 
 - Como os códigos são longos, use táticas para poupar tokens, tanto na exibição quanto captação dos conteúdos da tree 
 - Não precisa economizar quando for criar arquivo do zero, neste caso a qualidade é prioridade 
-- Para atualizar seções de arquivos que já foram verificados, faça backup e correção manual, linha por linha, sem usar sed que pode causar problemas de encoding 
 - Sempre que precisar do retorno de um comando, use o formato { comandos; } | xclip -sel clip
 - Não use 2>/dev/null, escolha manter a mensagem técnica de erro do comando para passá-la ao xclip
+- Para atualizar seções de arquivos que já foram verificados, não use sed como editor (problemas de encoding), use python3
+  Exemplo: 
+python3 << 'EOF'
+with open('frontend/app/dashboard/birthday-people/page.tsx', 'r') as f:
+    content = f.read()
+
+# Encontrar e corrigir o Menu
+import re
+pattern = r'(<Menu\s*\n\s*anchorEl=\{menuAnchor\}\s*\n\s*)anchorOrigin=\{\{\s*\n?\s*horizontal: "right",\s*\n?\s*\}\}'
+replacement = r'''\1anchorOrigin={{
+          vertical: "bottom",
+          horizontal: "right",
+        }}'''
+
+content = re.sub(pattern, replacement, content)
+
+with open('frontend/app/dashboard/birthday-people/page.tsx', 'w') as f:
+    f.write(content)
+
+print("Menu corrigido!")
+EOF 
