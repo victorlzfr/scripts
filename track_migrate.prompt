@@ -28,8 +28,6 @@
      - Conteúdo do box:`git add [nome_arquivo_md_sessao] && git commit -m "docs: [descrição_da_sessão]" && git push`
    5) Codeblock bash: Text migração
      - Conteúdo do box: Saída completa do "PROMPT GERADOR DE PROMPT DE MIGRAÇÃO (VERSÃO ITERATIVA-HIERÁRQUICA)"		
-   6) Texto livre: Definição dos Termos-Chave 
-     - Conteúdo do box: Pré-requisito: Os termos a serem definidos devem ser exatamente os mesmos listados no último item (X.) do template markdown. Liste os termos em ordem numérica. Para cada um, forneça uma definição detalhada, porém concisa, contextualizada à discussão da sessão. O objetivo é construir um glossário incremental do projeto para anotação em caderno físico e aprendizado teórico.
  
 ## PROMPT GERADOR DE PROMPT DE MIGRAÇÃO (VERSÃO ITERATIVA-HIERÁRQUICA)
 Contexto para o Assistente:
