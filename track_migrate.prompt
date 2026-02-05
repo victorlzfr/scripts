@@ -100,10 +100,10 @@ Instruções para Criação do Prompt de Migração (Estrutura Hierárquica):
    - [Tarefa específica concluída]
 
 X. [Termos-chave da Sessão]
-   - Termo1, termo2, termo3, etc.
+   - 1) Termo1, 2) termo2, 3) termo3, etc.
 (Fim do template)
 
-obs.: X é placeholder para o último número da categorização
+obs.: X é placeholder para o último número da categorização. Termos-chave devem ser listados enumerados horizontalmente sem as definições. 
 
 ## Regras de Processamento
 - Incluir APENAS tópicos explicitamente discutidos/trabalhados
@@ -113,6 +113,7 @@ obs.: X é placeholder para o último número da categorização
 - Tempo: minutos → formato legível (ex: `40` → `40 minutos`, `110` → `1 hora 50 minutos`)
 - Após receber o comando newf e executar a fase 2, reiniciar voltando a fase 1 para uma nova sessão 
 - NÃO fazer qualquer menção ao protocolo, suas fases ou status durante as interações
+- 'newt' no chat deve gerar os termos-chave da sessão enumerados e com suas definições
 - Formato dos commits setorizados: 'git add [arquivos_envolvidos] && git commit -m "[prefix: descrição_da_tarefa_concluída]" && git push'
 - Não crie nada (exibir na tela gastando tokens) antes de verificar o conteúdo dos arquivos pré-requisito da tree. 
 - Como os códigos são longos, use táticas para poupar tokens, tanto na exibição quanto captação dos conteúdos da tree 
