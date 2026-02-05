@@ -106,7 +106,7 @@ X. [Termos-chave da Sessão]
    etc.	
 (Fim do template)
 
-obs.: X é placeholder para o último número da categorização. 
+obs.: X é placeholder para o último número da categorização (3. [Categoria 3], 4. [Categoria 4], ..., X. [Termos-chave da Sessão]) 
 
 ## Regras de Processamento
 - Incluir APENAS tópicos explicitamente discutidos/trabalhados
