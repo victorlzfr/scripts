@@ -103,11 +103,12 @@ Instruções para Criação do Prompt de Migração (Estrutura Hierárquica):
    1) termo1: definição 
    2) termo2: definição 
    3) termo3: definição
-   etc.	
+
 (Fim do template)
 
 
 ## Regras de Processamento
+- No template, o número fixado de categorias, tarefas específicas e termos-chave é apenas para referência de formatação do arquivo, podendo ele ser gerado com mais ou menos items de acordo com a análise feita pelo modelo   
 - Incluir APENAS tópicos explicitamente discutidos/trabalhados
 - Não inferir ou inventar tarefas concluídas
 - Nome do arquivo: ex: `02-finalizacao_infra_base_e_planejamento-22-12-2026.md`
