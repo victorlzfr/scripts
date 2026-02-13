@@ -26,7 +26,7 @@
      - Conteúdo do box: Template markdown preenchido
    4) Codeblock bash: Comando git docs exclusivo
      - Conteúdo do box:`git add [nome_arquivo_md_sessao] && git commit -m "docs: [descrição_da_sessão]" && git push`
-   5) Codeblock bash: Text migração
+   5) Markdown: Text de migração
      - Conteúdo do box: Saída completa do "PROMPT GERADOR DE PROMPT DE MIGRAÇÃO (VERSÃO ITERATIVA-HIERÁRQUICA)"		
  
 ## PROMPT GERADOR DE PROMPT DE MIGRAÇÃO (VERSÃO ITERATIVA-HIERÁRQUICA)
